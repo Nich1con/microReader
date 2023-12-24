@@ -110,7 +110,7 @@ void loop() {
     uiTimer = millis();                             // Сбрасываем таймер дисплея
     cursor = constrain(cursor - 1, 0, files - 1);   // Двигаем курсор
     drawMainMenu();                                 // Обновляем главное меню
-  } else if (down.isClick() or up.isHold()) {       // Если нажата или удержана кнопка вниз
+  } else if (down.isClick() or down.isHold()) {       // Если нажата или удержана кнопка вниз
     uiTimer = millis();                             // Сбрасываем таймер дисплея
     cursor = constrain(cursor + 1, 0, files - 1);   // Двигаем курсор
     drawMainMenu();                                 // Обновляем главное меню
