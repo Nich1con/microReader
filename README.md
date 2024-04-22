@@ -14,7 +14,7 @@
 - Паяльник с тонким жалом
 - Припой **ПОС-61**, **KAINA** или аналог
 - Нейтральный / безотмывочный флюс для пайки
-- Средства для удаления следов флюса - спирт / FluxOFF или аналог
+- Средства для удаления следов флюса - спирт / **FluxOFF** или аналог
 - Кусачки, ножницы или канцелярский нож
 - Мультиметр 
 ### Важные моменты
@@ -23,7 +23,9 @@
 - Тщательно смывайте остатки флюса после **каждого** этапа сборки!   
 ### Этапы сборки
 ![ASM1](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_1.png)
+---
 ![ASM2](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_2.png)
+---
 ![ASM3](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_3.png)
 ![ASM4](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_4.png)
 ![ASM5](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_5.png)
