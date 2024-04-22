@@ -22,13 +22,13 @@
 - Не рекомендуется использовать дешёвый китайский припой
 - Тщательно смывайте остатки флюса после **каждого** этапа сборки!   
 ### Этапы сборки
-![ASM1](https://github.com/Nich1con/microReader/manual/Assembly_1.png)
-![ASM2](https://github.com/Nich1con/microReader/manual/Assembly_2.png)
-![ASM3](https://github.com/Nich1con/microReader/manual/Assembly_3.png)
-![ASM4](https://github.com/Nich1con/microReader/manual/Assembly_4.png)
-![ASM5](https://github.com/Nich1con/microReader/manual/Assembly_5.png)
-![ASM6](https://github.com/Nich1con/microReader/manual/Assembly_6.png)
-![ASM7](https://github.com/Nich1con/microReader/manual/Assembly_7.png)
+![ASM1](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_1.png)
+![ASM2](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_2.png)
+![ASM3](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_3.png)
+![ASM4](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_4.png)
+![ASM5](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_5.png)
+![ASM6](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_6.png)
+![ASM7](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_7.png)
 
 
 
