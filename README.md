@@ -1,4 +1,8 @@
 # microReader v1.1
+## Оглавление
+[Инструкция по сборке проекта](#assembly)
+
+
 ## Обновление 1.1 
 - Обновлена плата [https://oshwlab.com/nich1con/microreader]
 - Добавлено отображение картинок в **.itxt / .h** (см. инструкцию)
@@ -9,7 +13,7 @@
 - Значительно оптимизирована работа с файловой системой (ускорена работа)
 - Весь интерфейс русифицирован
 
-## Сборка и пайка
+## <a id="assembly">Сборка и пайка 1</a>
 ### Понадобится для сборки
 - Паяльник с тонким жалом
 - Припой **ПОС-61**, **KAINA** или аналог
@@ -27,10 +31,15 @@
 ![ASM2](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_2.png)
 ---
 ![ASM3](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_3.png)
+---
 ![ASM4](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_4.png)
+---
 ![ASM5](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_5.png)
+---
 ![ASM6](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_6.png)
+---
 ![ASM7](https://github.com/Nich1con/microReader/blob/main/manual/Assembly_7.png)
+---
 
 
 
