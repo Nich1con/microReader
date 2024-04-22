@@ -1,0 +1,3 @@
+Test file in UTF-8 encoding
+
+Тестовый файл в кодировке UTF-8

@@ -1,0 +1,107 @@
+#######################################
+# Syntax Coloring Map For EncButton
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+EncButton	KEYWORD1
+EncButtonT	KEYWORD1
+VirtEncButton	KEYWORD1
+Button	KEYWORD1
+ButtonT	KEYWORD1
+VirtEncoder	KEYWORD1
+VirtButton	KEYWORD1
+
+EB_NO_COUNTER	KEYWORD1
+EB_NO_BUFFER	KEYWORD1
+EB_NO_CALLBACK	KEYWORD1
+EB_NO_FOR	KEYWORD1
+
+EB_DEB_TIME	KEYWORD1
+EB_CLICK_TIME	KEYWORD1
+EB_HOLD_TIME	KEYWORD1
+EB_STEP_TIME	KEYWORD1
+EB_FAST_TIME	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+EB_read	KEYWORD2
+EB_uptime	KEYWORD2
+EB_mode	KEYWORD2
+
+setHoldTimeout	KEYWORD2
+setStepTimeout	KEYWORD2
+setClickTimeout	KEYWORD2
+setDebTimeout	KEYWORD2
+setBtnLevel	KEYWORD2
+reset	KEYWORD2
+clear	KEYWORD2
+press	KEYWORD2
+release	KEYWORD2
+click	KEYWORD2
+pressing	KEYWORD2
+hold	KEYWORD2
+holding	KEYWORD2
+step	KEYWORD2
+hasClicks	KEYWORD2
+getClicks	KEYWORD2
+getSteps	KEYWORD2
+releaseHold	KEYWORD2
+releaseStep	KEYWORD2
+timeout	KEYWORD2
+waiting	KEYWORD2
+busy	KEYWORD2
+action	KEYWORD2
+attach	KEYWORD2
+detach	KEYWORD2
+pressISR	KEYWORD2
+pressFor	KEYWORD2
+holdFor	KEYWORD2
+stepFor	KEYWORD2
+
+setEncReverse	KEYWORD2
+setEncType	KEYWORD2
+initEnc	KEYWORD2
+
+setFastTimeout	KEYWORD2
+setEncISR	KEYWORD2
+turn	KEYWORD2
+turnH	KEYWORD2
+right	KEYWORD2
+left	KEYWORD2
+rightH	KEYWORD2
+leftH	KEYWORD2
+encHolding	KEYWORD2
+dir	KEYWORD2
+fast	KEYWORD2
+
+pollEnc	KEYWORD2
+init	KEYWORD2
+tickRaw	KEYWORD2
+tickISR	KEYWORD2
+tick	KEYWORD2
+readBtn	KEYWORD2
+readEnc	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################	
+EB_PRESS	LITERAL1
+EB_HOLD	LITERAL1
+EB_STEP	LITERAL1
+EB_RELEASE	LITERAL1
+EB_CLICK	LITERAL1
+EB_CLICKS	LITERAL1
+EB_TURN	LITERAL1
+EB_REL_HOLD	LITERAL1
+EB_REL_HOLD_C	LITERAL1
+EB_REL_STEP	LITERAL1
+EB_REL_STEP_C	LITERAL1
+
+EB_STEP4_LOW	LITERAL1
+EB_STEP4_HIGH	LITERAL1
+EB_STEP2	LITERAL1
+EB_STEP1	LITERAL1

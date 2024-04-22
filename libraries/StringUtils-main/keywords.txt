@@ -1,0 +1,137 @@
+#######################################
+# Syntax Coloring Map For StringUtils
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+StringUtils	KEYWORD1
+
+Text	KEYWORD1
+ValueT	KEYWORD1
+Value	KEYWORD1
+List	KEYWORD1
+Parser	KEYWORD1
+PrintString	KEYWORD1
+SplitterT	KEYWORD1
+Splitter	KEYWORD1
+TextList	KEYWORD1
+TextListT	KEYWORD1
+StringExt	KEYWORD1
+StringStatic	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+# string
+terminate	KEYWORD2
+clear	KEYWORD2
+trunc	KEYWORD2
+concat	KEYWORD2
+assign	KEYWORD2
+
+# parser
+parse	KEYWORD2
+index	KEYWORD2
+get	KEYWORD2
+
+su	KEYWORD2
+b64	KEYWORD2
+list	KEYWORD2
+unicode	KEYWORD2
+url	KEYWORD2
+
+pgm	KEYWORD2
+terminated	KEYWORD2
+lengthUnicode	KEYWORD2
+length	KEYWORD2
+calcLen	KEYWORD2
+readLen	KEYWORD2
+type	KEYWORD2
+str	KEYWORD2
+valid	KEYWORD2
+printTo	KEYWORD2
+compare	KEYWORD2
+compareN	KEYWORD2
+substring	KEYWORD2
+startsWith	KEYWORD2
+endsWith	KEYWORD2
+indexOf	KEYWORD2
+lastIndexOf	KEYWORD2
+find	KEYWORD2
+charAt	KEYWORD2
+addString	KEYWORD2
+toString	KEYWORD2
+toStr	KEYWORD2
+toBool	KEYWORD2
+toInt16	KEYWORD2
+toInt32	KEYWORD2
+toInt32HEX	KEYWORD2
+toInt64	KEYWORD2
+toFloat	KEYWORD2
+decodeB64	KEYWORD2
+sizeB64	KEYWORD2
+count	KEYWORD2
+split	KEYWORD2
+getSub	KEYWORD2
+trim	KEYWORD2
+
+encodedLen	KEYWORD2
+decodedLen	KEYWORD2
+encode	KEYWORD2
+decode	KEYWORD2
+
+strlenRu	KEYWORD2
+intLen	KEYWORD2
+floatLen	KEYWORD2
+strToInt	KEYWORD2
+strToInt_P	KEYWORD2
+floatToStr	KEYWORD2
+strToIntHex	KEYWORD2
+charSize	KEYWORD2
+uintToStr	KEYWORD2
+intToStr	KEYWORD2
+uint64ToStr	KEYWORD2
+int64ToStr	KEYWORD2
+getPow10	KEYWORD2
+getLog10	KEYWORD2
+
+length	KEYWORD2
+indexOf	KEYWORD2
+includes	KEYWORD2
+get	KEYWORD2
+setDiv	KEYWORD2
+parseTo	KEYWORD2
+
+next	KEYWORD2
+index	KEYWORD2
+str	KEYWORD2
+get	KEYWORD2
+
+toQwerty	KEYWORD2
+
+restore	KEYWORD2
+needsEncode	KEYWORD2
+
+hash_c	KEYWORD2
+hash32_c	KEYWORD2
+hash	KEYWORD2
+hash32	KEYWORD2
+hash_P	KEYWORD2
+hash32_P	KEYWORD2
+SH	KEYWORD2
+SL	KEYWORD2
+SH32	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+AT_SAFE_STRING	LITERAL1
+SU_ANYVALUE_BUF_LEN	LITERAL1
+
+constChar	LITERAL1
+pgmChar	LITERAL1
+value	LITERAL1

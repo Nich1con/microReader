@@ -1,0 +1,48 @@
+#######################################
+# Syntax Coloring Map For GyverIO
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+GyverIO	KEYWORD1
+Pin	KEYWORD1
+PinIO	KEYWORD1
+PinT	KEYWORD1
+SSPI	KEYWORD1
+
+GIO_USE_ARDUINO	KEYWORD1
+GIO_NO_MASK	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+init	KEYWORD2
+toggle	KEYWORD2
+write	KEYWORD2
+high	KEYWORD2
+low	KEYWORD2
+read	KEYWORD2
+mode	KEYWORD2
+
+read	KEYWORD2
+read_byte	KEYWORD2
+read_cs	KEYWORD2
+read_cs_byte	KEYWORD2
+send	KEYWORD2
+send_byte	KEYWORD2
+send_cs	KEYWORD2
+send_cs_byte	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+gio	LITERAL1
+shift	LITERAL1
+LSB_NORMAL	LITERAL1
+MSB_NORMAL	LITERAL1
+LSB_REVERSE	LITERAL1
+MSB_REVERSE	LITERAL1
