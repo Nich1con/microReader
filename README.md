@@ -20,7 +20,7 @@
 
 ## <a id="parts">Платы, компоненты и наборы</a>
 ### Наборы
-Все необходимое для повторения проекта можно заказать у нас: [OZON](https://clck.ru/3AE6Jm)
+Все необходимое для повторения проекта можно заказать на [OZON](https://clck.ru/3AE6Jm)
 ![KIT](https://github.com/Nich1con/microReader/blob/main/manual/kit.png)
 Преимущества:
 - Все необходимые компоненты **одной** посылкой
@@ -28,17 +28,18 @@
 - Модуль TP4056 **не требует** доработки
 - Комплект **SMD + выводных** компонентов на выбор
 ### Компоненты 
-- Дисплей SSD1306 **4-pin** [Aliexpress](https://fas.st/6m9ia)
-- Аккумулятор **502025** [Aliexpress](https://fas.st/ScpZv)
-- Модуль **ESP12E** [Aliexpress](https://fas.st/B_DJo)
-- Модуль **TP4056** [Aliexpress](https://fas.st/myf-5)
-- Кнопки **бесшумные** [Aliexpress](https://fas.st/6HQUZr)
-- Переключатель **2P2T MSS22D18** [Aliexpress](https://fas.st/a0ehQ)
-- Разъем **2P XH2.54** [Aliexpress](https://fas.st/hLyMM)
-- Кабель **2P XH2.54** [Aliexpress](https://fas.st/BRWcS)
+- [Дисплей ](https://fas.st/6m9ia) SSD1306 **4-pin**
+- [Аккумулятор](https://fas.st/ScpZv) **502025**
+- [Модуль](https://fas.st/B_DJo) **ESP12E**
+- [Модуль](https://fas.st/myf-5) **TP4056**
+- [Кнопки](https://fas.st/6HQUZr) **бесшумные** 6х6х5 мм
+- [Переключатель](https://fas.st/a0ehQ) **2P2T MSS22D18**
+- [Разъем ](https://fas.st/hLyMM) **2P XH2.54**
+- [Кабель](https://fas.st/BRWcS) **2P XH2.54**
 - Резисторы 10 кОм **выводные 0.25W** или **SMD 1206** 5шт.
 - Резистор 220 Ом **выводной 0.25W** или **SMD 1206** 1шт.
 - Диод FR107 **выводной DO-41** или **SMD SOD-123** 1шт.
+- Резистор 10 кОм SMD 0805 **для доработки модуля TP4056**
 ### Плата
 - Gerber-файлы для изготовления платы можно найти в папке **PCB**
 - Рекомендуемые параметры платы: черная маска, толщина 1.6 мм
