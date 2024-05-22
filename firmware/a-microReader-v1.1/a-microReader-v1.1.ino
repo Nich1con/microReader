@@ -163,6 +163,11 @@ void loop() {
     dinosaurGame();
   }
 
+  if (down.hold()) {
+    uiTimer = millis();  // Сбрасываем таймер дисплея
+    calc();
+  }
+
   if (millis() - uiTimer >= 5000) {  // Каждые 5 сек принудительно обновляем дисп. ради индикации заряда
     uiTimer = millis();
     drawMainMenu();
