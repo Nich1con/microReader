@@ -14,7 +14,7 @@ void enterToServiceMode(void) {
 
   digitalWrite(LED_BUILTIN, LOW); // Зажигаем лед
 
-  EEPROM.begin(100);              // Инициализация EEPROM
+  //EEPROM.begin(100);              // Инициализация EEPROM
   while (!LittleFS.begin()) {     // Инициализация файловой системы
     LittleFS.format();
   }
@@ -25,6 +25,7 @@ void enterToServiceMode(void) {
     up.tick();
     ok.tick();
     down.tick();
+    data.tick();
 
     if (up.click()) {
       servCursor = constrain(servCursor - 1, 0, SERV_MENU_LINES - 1);
@@ -37,8 +38,9 @@ void enterToServiceMode(void) {
     if (ok.click()) {
       switch (servCursor) {
         case 0:           // Сброс настроек
-          EEPROM.put(1, sets);
-          EEPROM.commit();
+          //EEPROM.put(1, sets);
+          //EEPROM.commit();
+          data.write();
           drawResetNotify();
           drawServiceMenu();
           break;
@@ -51,7 +53,7 @@ void enterToServiceMode(void) {
 
         case 2:            // Выход
           LittleFS.end();  // Деинит FS (на всякий случай)
-          EEPROM.end();    // Деинит EE (на всякий случай)
+          //EEPROM.end();  // Деинит EE (на всякий случай)
           return;
       }
     }
@@ -87,7 +89,7 @@ void drawFormatNotify(void) {
 void drawServiceMenu(void) {
   oled.clear();               // Чистим дисплей
   oled.line(0, 10, 127, 10);  // Линия
-  oled.print(F("FW.V1.1"));   // Версия прошивки
+  oled.print(F("FW.V1.2"));   // Версия прошивки
   oled.setCursor(0, 2);       // Выводим с 2й строки
 
   oled.print(F(               // Выводим пункты

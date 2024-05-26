@@ -45,7 +45,7 @@ void drawMainMenu(void) {     // Отрисовка главного меню
       oled.print(p);                         // Выводим имя
     }
     if (p.index() == cursor + 1) {       // Если курсор указывает на имя
-      selectedFile = (String)p;          // Запоминаем имя
+      selectedFile = String(p);          // Запоминаем имя
     }
     if (p.index() > sidx + 5) break;     // Как только распарсили 6 строк - выходим
     yield();                             // Внутренний поллинг ESP

@@ -1,0 +1,35 @@
+#######################################
+# Syntax Coloring Map For FileData
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+FileData	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+setFS	KEYWORD2
+setKey	KEYWORD2
+setData	KEYWORD2
+setTimeout	KEYWORD2
+read	KEYWORD2
+updateNow	KEYWORD2
+update	KEYWORD2
+tick	KEYWORD2
+write	KEYWORD2
+addWithoutWipe	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+FD_IDLE	LITERAL1
+FD_WAIT	LITERAL1
+FD_FS_ERR	LITERAL1
+FD_FILE_ERR	LITERAL1
+FD_WRITE	LITERAL1
+FD_READ	LITERAL1
+FD_ADD	LITERAL1
+FD_NO_DIF	LITERAL1
+FD_RESET	LITERAL1

@@ -36,6 +36,7 @@ void enterToWifiMenu(void) {     // Переход в режим WIFI
           ok.tick();                         // Опрос кнопки ОК
           up.tick();                         // Опрос кнопки UP
           down.tick();                       // Опрос кнопки DOWN
+          data.tick();
 
           if (up.click() || up.hold()) {  // Поднять яркость
             uiTimer = millis();           // Сброс таймера дисплея
@@ -55,8 +56,9 @@ void enterToWifiMenu(void) {     // Переход в режим WIFI
             uiTimer = millis();                                                 // Сброс таймера дисплея
             checkFileSystem();                                                  // Чекаем файловую систему
             drawMainMenu();                                                     // Рисуем главное меню
-            EEPROM.put(1, sets);                                                // Сохраняем все настройки в EEPROM
-            EEPROM.commit();                                                    // Записываем
+            //EEPROM.put(1, sets);                                              // Сохраняем все настройки в EEPROM
+            //EEPROM.commit();                                                  // Записываем
+            data.update();                                                      // Сохраняем и записываем
             WiFi.mode(WIFI_OFF);                                                // Вырубаем wifi
             return;                                                             // Валим из функции
           }
@@ -83,6 +85,7 @@ void enterToWifiMenu(void) {     // Переход в режим WIFI
     ok.tick();                            // Опрос кнопки ОК
     up.tick();                            // Опрос кнопки UP
     down.tick();                          // Опрос кнопки DOWN
+    data.tick();
 
     if (up.click() || up.hold()) {        // Поднять яркость
       uiTimer = millis();                 // Сброс таймера дисплея
@@ -102,8 +105,9 @@ void enterToWifiMenu(void) {     // Переход в режим WIFI
       uiTimer = millis();                                                 // Сброс таймера дисплея
       checkFileSystem();                                                  // Чекаем файловую систему
       drawMainMenu();                                                     // Рисуем главное меню
-      EEPROM.put(1, sets);                                                // Сохраняем все настройки в EEPROM
-      EEPROM.commit();                                                    // Записываем
+      //EEPROM.put(1, sets);                                              // Сохраняем все настройки в EEPROM
+      //EEPROM.commit();                                                  // Записываем
+      data.update();                                                      // Сохраняем и записываем
       WiFi.softAPdisconnect();                                            // Отключаем точку доступа
       WiFi.mode(WIFI_OFF);                                                // Вырубаем wifi
       return;                                                             // Валим из функции

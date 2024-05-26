@@ -54,8 +54,9 @@ const uint8_t BirdR_bmp[] PROGMEM = {   // 24x16 - Птица с крыльям�
 
 void dinosaurGame(void) {                                                           // Главное меню игры
   while (true) {                                                                    // Бесконечный цикл
-    uint16_t bestScore = 0;                                                         // Лучший счет
-    EEPROM.get(DINO_EE_ADDR, bestScore);                                            // Берем его из EEPROM
+    data.tick();                                                                    // Тикаем память
+    uint16_t &bestScore = sets.dinoBestScore;                                       // Лучший счет
+    //EEPROM.get(DINO_EE_ADDR, bestScore);                                          // Берем его из EEPROM
     oled.clear();                                                                   // Очистка дисплея
     oled.roundRect(0, 9, 127, 46, OLED_STROKE);                                     // Отрисовка интерфейса
     oled.setCursor(3, 0); oled.print(F("GOOGLE DINOSAUR GAME"));                    // Отрисовка интерфейса
@@ -71,11 +72,13 @@ void dinosaurGame(void) {                                                       
     while (true) {                                                                  // Вложенный бесконечный цикл
       up.tick();
       ok.tick();
+      data.tick();                                                                  // Тикаем память
 
       if(up.click() || millis() - uiTimer >= 10000){
         Wire.setClock(600E3);
         system_update_cpu_freq(80);
-        drawMainMenu(); 
+        //drawMainMenu(); 
+        drawGameMenu();
         return;
       }
 
@@ -115,13 +118,14 @@ startDinoGame:                         // Начало игры
   int8_t dinoY = DINO_GROUND_Y;        // Позиция динозавра по вертикали (изначально на земле)
   float dinoU = 0.0;                   // Скорость динозавра (вектор направлен вниз)
 
-  EEPROM.get(DINO_EE_ADDR, bestScore); // Читаем рекорд из EEPROM
+  //EEPROM.get(DINO_EE_ADDR, bestScore); // Читаем рекорд из EEPROM
 
   while (1) {                                                   // Бесконечный цикл игры
     yield();
     up.tick();
     ok.tick();
     down.tick();
+    data.tick();                                                             // Тикаем память
 
     if (up.click()) return;                                                  // Клик кнопки влево мгновенно возвращает нас в игровое меню
 
@@ -151,7 +155,10 @@ startDinoGame:                         // Начало игры
     if (millis() - scoreTimer >= 100) {
       scoreTimer = millis();
       score++;                                                               // Увеличиваем счет
-      gameSpeed = constrain(map(score, 1000, 0, 4, 10), 4, 10);              // Увеличиваем скорость игры! (10 - медленно, 4 - очень быстро)
+      if (score < 1000) 
+        gameSpeed = constrain(map(score, 900, 0, 4, 10), 4, 10);             // Увеличиваем скорость игры! (10 - медленно, 4 - очень быстро)
+      else 
+        gameSpeed = constrain(map(score%1000, 900, 0, 4, 7), 4, 7);          // Увеличиваем скорость игры! (7 - нормально, 4 - очень быстро)
     }
 
     static uint32_t enemyTimer = millis();                                   // Таймер кинематики противников
@@ -201,7 +208,7 @@ startDinoGame:                         // Начало игры
       checkBatteryCharge();                                                                             // Проверка напряжение аккума
       drawBatteryCharge();                                                                              // Рисуем индикатор
       oled.setCursor(0, 0); oled.print("HI");                                                           // Выводим рекорд
-      oled.setCursor(13, 0); oled.print(bestScore); oled.print(":"); oled.print(score);                 // Рекорд:текущий счет
+      oled.setCursor(13, 0); oled.print(sets.dinoBestScore); oled.print(":"); oled.print(score);        // Рекорд:текущий счет
       oled.line(0, 63, 127, 63);                                                                        // Рисуем поверхность земли (линия)
 
       switch (oldEnemyType) {                                                                           // Выбираем старого противника
@@ -225,13 +232,14 @@ startDinoGame:                         // Начало игры
           oled.setScale(1); oled.setCursor(3, 4); oled.print(F("<- Вверх"));                            // Выводим подсказку
           oled.setCursor(96, 4); oled.print(F("Ок ->"));                                                // Выводим подсказку
           oled.update();                                                                                // Отрисовка картинки на дисплей
-          if (score > bestScore) {                                                                      // Если новый рекорд
-            EEPROM.put(DINO_EE_ADDR, score);                                                            // Обновляем его
-            EEPROM.commit();                                                                            // Запись
+          if (score > sets.dinoBestScore) {                                                             // Если новый рекорд
+            sets.dinoBestScore = score;                                                                 // Обновляем его
+            data.update();                                                                              // Запись
           }                                       
           while (1) {                                                                                   // Бесконечный цикл
             ok.tick();
             up.tick(); 
+            data.tick();
             if (ok.click()) goto startDinoGame;                                                         // Начинаем сначала
             if (up.click() || millis() - uiTimer > 30000) return;                                       // Вернулись в меню
             yield();
